@@ -1,0 +1,710 @@
+/* ================== main ===============*/
+
+html {
+    --color-main: #40b8f5;
+    --color-white: #fbfbfb;
+    --color-font: #3b3b3b;
+    --color-blue: #0095ba;
+    --color-light-gray: #b1b1b1;
+    --color-very-light-gray: #dadada;
+    overflow-x: hidden;
+}
+a {
+    color: var(--color-blue);
+}
+div {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+button {
+    background: var(--color-main);
+    padding: 10px 15px 10px 15px;
+    border: 2px var(--color-blue) solid;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+button:hover {
+    cursor: pointer;
+}
+.pad-5 {padding: 5px;}
+.pad-15 {padding: 15px;}
+.min-height { min-height: 600px;}
+.min-height { min-height: 600px;}
+.container { width: 100%; max-width: 1100px; margin: 0 auto 0 auto; padding: 10px}
+.items { padding: 20px; }
+.md-4 { width: 100%; max-width: 200px; }
+.md-3 { width: 100%; max-width: 300px; }
+.md-2 { width: 100%; max-width: 450px; }
+.md-1 { width: 100%; max-width: 870px; }
+.row { display: flex; justify-content: center; flex-wrap: wrap; }
+.line {
+    margin: 100px;
+    border-color: var(--color-light-gray); 
+}
+
+/* ================== nav ====================== */
+
+nav {
+    width: 100%;
+    background: var(--color-white);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+nav > .items {
+    text-align: center;
+}
+nav > .items > a {
+    padding: 15px;
+    color: var(--color-font);
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+nav > .items > button {
+    margin-top: 10px;
+}
+nav > .items > a.logo::before {
+    display: inline;
+    margin-top: -15px;
+}
+nav > .items > a.logo::before {
+    content: " ";
+    background: url("https://ocdn.eu/zapytaj-transforms/1/E8Mk9ktTURBXy9jMDI5NGQzMS03YjM0LTQ3YjItYzQ0OC1jYjY3YzgyMTZjMTMucG5nkpUCAM0BLMLDlQLNASwAwsOBAQI");
+    background-size: cover;
+    position: relative;
+    display: inline-block;
+    top: 25%;
+    left: -5px;
+    width: 50px;
+    height: 50px;
+}
+
+.profilemenu {
+    background: var(--color-very-light-gray);
+    display: flex;
+    z-index: 5;
+    flex-direction: column;
+    transform: translate(28%, -500%);
+    position: absolute;
+    transition: .3s;
+}
+.profilemenu > a {
+    padding: 10px;
+    color: var(--color-font);
+    border-bottom: 1px var(--color-white) solid;
+}
+.profilemenu > a:hover {
+    color: var(--color-blue);
+}
+/* ======================== index ======================== */
+
+.jumbotron {
+    width: 100%;
+    background: url("https://www.bergerpaints.com/colour-magazine/Upload/Quiz/Banner/quiz-bnr-nov19.jpg") no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    background-size: 100%;
+    padding: 10%;
+    box-sizing: border-box;
+    color: var(--color-white);
+}
+.zdj-quiz {
+    background: url('https://canopylab.com/wp-content/uploads/2020/05/Working-with-adaptive-quizzes-A-beginners-guide.jpg') no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    background-size: 100%;
+    padding: 10%;
+}
+.jumbotron > .text > p {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: var(--color-main);
+}
+.jumbotron > .text {
+    margin-top: -50px;
+    font-size: 1.3rem;
+    position: relative;
+    transform: translate(-200%);
+    max-width: 500px;
+    width: 80%;
+    transition: transform 0.6s;
+}
+.slider {
+    overflow-x: auto;
+}
+.s1 {
+    background: url("http://portaltatrzanski.pl/upload/article/2c65d9afc4c92c3f3c3872641758eb26.jpeg");
+}
+.s2 {
+    background: url("http://portaltatrzanski.pl/upload/article/c8bf990f72c49faf8d9e5986754cdc65.jpeg");
+}
+.s3 {
+    background: url("http://portaltatrzanski.pl/upload/article/2bdd8b1cb241e4d5521145af1e097035.jpeg");
+}
+.slide {
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+    float: left;
+    display: inline;
+}
+.zdj-quiz {
+    background: url('https://canopylab.com/wp-content/uploads/2020/05/Working-with-adaptive-quizzes-A-beginners-guide.jpg') no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    background-size: 100%;
+    padding: 10%;
+    filter: grayscale(0.7);
+}
+
+
+.items-img > img {
+    width: 100%;
+    /* box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.75); */
+}
+.items-img > img:hover {
+    transform: scale(1.1) rotate(1.2deg);
+    transition: .5s;
+}
+.hiddenScroll-left {
+    transform: translate(-300%);
+}
+.hiddenScroll-right {
+    transform: translate(300%);
+}
+.animation-hide {
+    transition: transform 0.8s;
+}
+/* ===================== login ======================== */
+
+.hidden {
+    display: none;
+}
+.L-container {
+    width: 350px;
+    box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    background: white;
+    margin-bottom: 10%;
+}
+.L-container::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -100;
+    height: 100%;
+    background: url("https://cdn4.vectorstock.com/i/1000x1000/09/33/clouds-in-sky-vector-24070933.jpg") no-repeat;
+    background-size: cover;
+    filter: brightness(1.25) opacity(0.7);
+}
+.login .register {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.login > .error:empty, .register > .error:empty{
+    height: 22px;
+}
+.login > .error, .register > .error{
+    color: red;
+    margin: 10px 0px -25px 0px;
+    text-align: center;
+}
+.login > .title, .register > .title{
+    margin-top: 10px;
+    font-size: 1.4rem;
+    text-align: center;
+}
+.login > a, .register > a {
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+.login > label > input, .register > label > input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #363636;
+    font-size: 1.05rem;
+}
+.login > label > input:focus, .register > label > input:focus {
+    outline: none;
+    border: cornflowerblue 1px solid;
+}
+.register > label {
+    display: block;
+    padding: 25px 30px 0px 30px;
+}
+.login > label {
+    display: block;
+    padding: 25px 30px 0px 30px;
+}
+.login > label > button:hover {
+    color: cornflowerblue;
+}
+.login > label > button {
+    border: none;
+    background: none;
+    position: relative;
+    padding: 15px;
+    margin: -15px 0 -15px -15px;
+    float: right;
+    top: -1.55rem;
+    color: #363636
+}
+.register > button, .login > button  {
+    width: 80%;
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 1.1rem;
+    margin: 10% 10% 10px 10%;
+    border: 1px solid #363636;   
+    background: cornflowerblue;
+}
+.register > button, .login > button:hover  {
+    background: rgb(137, 179, 255);
+}
+.L-switchMethod {
+    display: flex;
+    width: 350px;
+}
+.switchLogin {
+    width: 50%;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 0;
+    border: 1px #363636 solid;
+}
+.switchRegister {
+    width: 50%;
+    font-size: 1.2rem;
+    border-radius: 0;
+    padding: 5px;
+    border: 1px #363636 solid;
+    border-left: none;
+}
+.switchSelected {
+    background: cornflowerblue;
+}
+
+/* ===================== news ========================== */
+
+@media only screen and (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+}
+.navigation {
+    background: white;
+    border-bottom: var(--color-very-light-gray) 1px solid;
+    border-top: var(--color-very-light-gray) 1px solid;
+}
+.news > .title::first-letter, .news > .article::first-letter {
+    text-transform: uppercase;
+}
+.news > .title {
+    font-size: 1.6rem;
+}
+.news > .autor {
+    margin: 10px;
+    font-size: 0.8rem;
+}
+.news > .date {
+    margin: 10px;
+    font-size: 0.8rem;
+}
+.news > .article {
+    margin: 5px;
+    font-size: 1rem;
+}
+.news > .title:empty {
+    background: var(--color-light-gray);
+    width: 200px;
+    height: 27px;
+    margin: 2px;
+}
+
+.news > .autor:empty {
+    float: left;
+    background: var(--color-light-gray);
+    width: 100px;
+    height: 20px;
+    margin: 2px;
+}
+.news > .date:empty {
+    float: left;
+    background: var(--color-light-gray);
+    width: 100px;
+    height: 20px;
+    margin: 2px 2px 4px 2px;
+}
+.news > .article:empty {
+    clear: both;
+    background: var(--color-light-gray);
+    height: 90px;
+    margin: 2px;
+}
+
+.items-img:empty {
+    background: var(--color-light-gray);
+    height: 200px;
+    margin: 20px;
+}
+
+/*===================== fooher ============== */
+
+.footer {
+    background: var(--color-very-light-gray);
+}
+
+.footer-down {
+    background: var(--color-font);
+    padding: 20px;
+    text-align: center;
+    width: auto;
+    color: var(--color-light-gray);
+}
+/* ================== modal ==================*/
+.modal > .pop {
+    position: relative;
+    background: var(--color-very-light-gray);
+    width: 99%;
+    max-width: 600px;
+    color: black;
+    padding: 30px;
+    top: 50%;
+    left: 50%;
+    display: none;
+    transform: translate(-50%,-200%) scale(0.4);
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: transform .5s;
+}
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: none;
+    display: none;
+    transition: background .8s;
+    box-sizing: border-box;
+}
+/* ================== quiz =================== */
+
+/*page*/
+
+.pages {
+    display: flex;
+    color: var(--color-font);
+    justify-content: center;
+    margin: 40px 0px 20px 0px;
+}
+.pages > button:hover {
+    color: var(--color-blue);
+}
+.pages > button {
+    margin: 0;
+    background: none;
+    color: var(--color-font);
+    font-size: 1.4rem;
+    border: none;
+    transition: color .2s;
+}
+.pages > span {
+    display: block;
+    margin: 2px 0 0 0;
+    font-size: 1.6rem;
+}
+
+/*quiz style*/
+.sort {
+    margin: 5px;
+}
+.items-quiz > li {
+    border: 1px var(--color-light-gray) solid;
+    padding: 5px;
+    border-radius: 5px;
+}
+    
+.items-quiz > li > a:empty {
+    border: 1px var(--color-light-gray) solid;
+    display: block;
+    width: 400px;
+    height: 27px;
+    background: var(--color-light-gray);
+}
+.items-quiz > li {
+    list-style-type: none;
+    margin: 5px;
+    font-size: 1.2rem;
+}
+.ad {
+    width: 150px;
+}
+.answear {
+    display: flex;
+    flex-direction: column;
+}
+.answear > label {
+    width: 98%;
+    border: 1px var(--color-light-gray) solid;
+    margin: 2px;
+    font-size: 1.1rem;
+    padding: 5px;
+    border-radius: 2px;
+}
+.answear > label > input {
+    float: left;
+}
+.question {
+    border-bottom: 1px var(--color-font) solid;
+    margin: 10px;
+    padding: 10px;
+}
+.question > .title {
+    font-size: 1.3rem;
+}
+
+input:checked {
+    background: var(--color-main);
+}
+.clock > button {
+    margin-top: 20px;
+}
+.clock {
+    display: flex;
+    flex-direction: column;
+    border-top: 200px;
+    /* position: fixed; */
+    text-align: center;
+    background: white;
+    font-size: 1.3rem;
+    border: 1px var(--color-very-light-gray) solid;
+    padding: 20px;
+}
+.clock > img {
+    width: 100%;
+    max-width: 200px;
+}
+/* ======================= profile ==================== */
+
+#chart {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.items > .title {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.circle {
+    margin: 40px;
+    border: 25px var(--color-main) solid;
+    width: 170px;
+    height: 170px;
+    text-align: center;
+    padding: 7px;
+    font-size: 1.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-blue);
+    border-radius: 50%;
+}
+
+.profile > .title {
+    font-size: 1.4rem;
+    margin: 70px 0px 20px 0px;
+    font-weight: bold;
+    text-align: center;
+}
+.listQuizesGroup {
+    width: 100%;
+    display: flex;
+}
+.listQuizesGroup > button {
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    border-radius: 50px;
+    font-size: 1.4rem;
+    color: var(--color-white);
+    padding-top: 12px;
+}
+.listQuizesGroup > .listQuizes {
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    border-top: 1px black solid;
+    border-bottom: 1px black solid;
+}
+.listQuizesGroup > .listQuizes > div {
+    padding: 30px 20px 30px 20px;
+    min-width: 320px;
+    font-size: 1.3rem;
+    border-left: none;
+    text-align: center;
+}
+.listQuizesGroup > .listQuizes > div:last-child {
+    border-right: none;
+}
+/* ================ add quiz ==================== */
+
+.addquiz {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.addquiz > button:hover {
+    background: var(--color-main);
+    border-radius: 5px;
+}
+.addquiz > button {
+    font-size: 1.4rem;
+    border-radius: 0;
+    padding: 20px;
+    border: none;
+    width: 100%;
+    transition: background .4s;
+    background: var(--color-very-light-gray);
+}
+/* =================== search =============== */
+
+.title-search {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 100px 0px 20px 0px;
+}
+.search-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px 0px 70px 0px;
+}
+.search {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.search > input {
+    width: 80%;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border: 2px var(--color-light-gray) solid;
+    border-right: none;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    max-width: 600px;
+}
+.search > input:focus {
+    outline: none;
+}
+.search > button {
+    border-radius: 0;
+    width: 10%;
+    max-width: 100px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border: none;
+}
+
+.option-search {
+    width: 90%;
+    max-width: 700px;
+    display: none;
+    max-height: 130px;
+    overflow-y: scroll;
+    border: 2px var(--color-light-gray) solid;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 100;
+}
+
+.option-search > a > li {
+    padding: 4px 4px 4px 15px;
+    font-size: 1.1rem;
+    color: var(--color-font);
+    list-style-type: none;
+}
+.option-search > a {
+    text-decoration: none;
+}
+
+.option-search > a > li > .fas {
+    font-size: .9rem;
+    margin-right: 10px;
+}
+/* ====================== create quiz ============== */
+
+.createquiz {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.questionTable {
+    margin: 10px 0px 10px 0px;
+    border: 1px var(--color-light-gray) solid;
+    padding: 10px;
+    width: 100%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.questionTable > input {
+    width: 90%;
+    padding: 3px;
+    margin: 8px 3px 8px 3px;
+    border: none;
+    font-size: 1.1rem;
+    border-bottom: 1px var(--color-font) solid;
+}
+.questionTable > .answear > li > input[type=radio] {
+    width: 10px;
+    margin-right: 5px;
+}
+.questionTable > .answear > li > input {
+    width: 80%;
+    margin: 3px;
+    padding: 3px;
+    border: none;
+    border-bottom: 1px var(--color-font) solid;
+}
+
+.questionTable > button {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+.remove {
+    color: red;
+    width: auto;
+    background: none;
+    border: none;
+}

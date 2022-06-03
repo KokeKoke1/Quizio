@@ -1,0 +1,3 @@
+ErrorDocument 403 http://localhost/index.php?error
+ErrorDocument 404 http://localhost/index.php?error
+ErrorDocument 500 http://localhost/index.php?error
